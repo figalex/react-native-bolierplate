@@ -1,0 +1,17 @@
+---
+  parser: "babel-eslint"
+  env:
+    node: true
+  rules:
+    strict: 0
+    indent: [2, 2]
+    quotes: [2, 'single']
+    no-undef: "error"
+    no-unused-vars: 1 // see https://github.com/babel/babel-eslint/issues/21
+    no-console: ["error", { allow: ["warn", "error"] }]
+  globals:
+    window: true
+    "__DEV__": true
+    "Promise": true
+  plugins: ['react']
+  extends: ['eslint:recommended', 'plugin:react/recommended']
